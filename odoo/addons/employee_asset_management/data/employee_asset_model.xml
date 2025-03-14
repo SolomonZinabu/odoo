@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <!-- Register x_employee.asset in ir.model -->
+        <record id="model_x_employee_asset" model="ir.model">
+            <field name="name">Employee Asset</field>
+            <field name="model">x_employee.asset</field>
+            <field name="state">manual</field>
+        </record>
+    </data>
+</odoo>

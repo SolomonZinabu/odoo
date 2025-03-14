@@ -1,0 +1,43 @@
+<odoo>
+    <record id="view_asset_form" model="ir.ui.view">
+        <field name="name">x_employee.asset.form</field>
+        <field name="model">x_employee.asset</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="asset_type"/>
+                        <field name="serial_number"/>
+                        <field name="status"/>
+                        <field name="employee_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_asset_tree" model="ir.ui.view">
+        <field name="name">x_employee.asset.tree</field>
+        <field name="model">x_employee.asset</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="asset_type"/>
+                <field name="status"/>
+                <field name="employee_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <menuitem id="employee_asset_menu" name="Employee Asset Management"/>
+    <menuitem id="asset_menu" name="Assets"
+              parent="employee_asset_menu"
+              action="asset_action"/>
+
+    <record id="asset_action" model="ir.actions.act_window">
+        <field name="name">Assets</field>
+        <field name="res_model">x_employee.asset</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>
