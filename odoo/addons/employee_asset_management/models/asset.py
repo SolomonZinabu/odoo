@@ -1,9 +1,9 @@
 from odoo import models, fields
 
 class Asset(models.Model):
-    _name = 'x_employee.asset'
+    _name = 'x_employee.asset' 
     _description = 'Employee Asset'
-    name = fields.Char(string="Asset Name", required=True)
+    name = fields.Char(string="Asset Name", required=True) 
     asset_type = fields.Selection([
         ('laptop', 'Laptop'),
         ('phone', 'Phone'),
